@@ -1,0 +1,19 @@
+.idea/
+.DS_Store
+
+### Deploy flag
+.htdeployment
+
+### Node Modules ###
+node_modules/
+
+### Gradle ###
+.gradle
+.gradle/
+build/
+mobile/android/\.gradle/
+mobile/android/app/build/
+*.apk
+*.ap_
+*.aab
+local.properties

@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+}
+
+.clickable:hover {
+    cursor: pointer;
+}
+
+.cover {
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+#leftDrawer > div {
+    margin-top: 70px;
+}
