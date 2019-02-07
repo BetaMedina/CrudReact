@@ -9,6 +9,26 @@ $ npm start
 ```
 A área administrativa será aberta então no seu navegador no [localhost:3000](http://localhost:3000).
 
+# Principais pacotes utilizados
+
+### Material UI
+Biblioteca com componentes React no padrão do [Material Design](https://material.io/)
+- [Documentação](https://material-ui.com/)
+
+### @app-masters/js-lib
+Biblioteca da App Masters que integram as chamadas de CRUD da API diretamente com o Redux, fornecendo de maneira fácil as actions e reducers atravez do AMActions.
+- [Github](https://github.com/app-masters/redux-lib)
+
+### @app-masters/redux-lib
+Biblioteca da App Masters que integram as chamadas de CRUD da API diretamente com o Redux, fornecendo de maneira fácil as actions e reducers atravez do AMActions.
+- [Github](https://github.com/app-masters/redux-lib)
+
+### @app-masters/sync-cache
+Biblioteca da App Masters que ecapsula a criação de reducers e actions do AMAActions, permitindo a sua criação em apenas uma declaração de um objeto.
+De forma secundária, diponibiliza uma alternativa ao AMActions que consegue lidar com o gerenciamento de objetos em cache e online.
+- [Github](https://github.com/app-masters/sync-cache)
+
+
 # Tarefas
 
 ## 1 - Conferir funcionamento do CRUD
