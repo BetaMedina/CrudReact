@@ -15,7 +15,7 @@ class Dashboard extends Component {
                             Bem vindo ao tutorial de CRUD da App Masters.
                         </Typography>
                         <Typography>
-                            Consulte o README para saber como executar cada tarefa, mas qualquer dúvida, pergunte ao Baraky.
+                            Consulte o <a target='_blank' href={'https://github.com/app-masters/crud-tutorial/blob/master/README.md'}>README</a> para saber como executar cada tarefa, mas qualquer dúvida, pergunte ao Baraky.
                         </Typography>
                     </CardContent>
                 </Card>

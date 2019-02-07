@@ -3,15 +3,15 @@ Tutorial para novos membros da APP Mastes sobre como fazer um CRUD usando nossos
 
 Após clonar o repositório, instalar os pacotes necessários:
 ```
-$ cd Crud-Tutorial
+$ cd crud-tutorial
 $ npm install
 $ npm start
 ```
 A área administrativa será aberta então no seu navegador no [localhost:3000](http://localhost:3000).
 
-## Tarefas
+# Tarefas
 
-### 1 - Conferir funcionamento do CRUD
+## 1 - Conferir funcionamento do CRUD
 
 Temos um CRUD de exemplo para que você possa conferir, abra ele no admin, espere a lista carregar, crie um registro novo, edite um registro existente.
 
@@ -20,7 +20,7 @@ Temos um CRUD de exemplo para que você possa conferir, abra ele no admin, esper
 1. Olhar as rotas do navegador quando criando um registro novo e editando um já existente. Conferir formulário no mobile também.
 1. Deletando o registro que você criou, conferir a mensagem.
 
-### 2 - Criar nova lista
+## 2 - Criar nova lista
 
 Hora de criar outro CRUD. Na pasta `~/src/views/category` os arquivos já estão criados para o CRUD de categorias.
 
@@ -45,7 +45,7 @@ Igualmente, trocar as actions de `getObjects` e `deleteObject` para a category.
 
 1. Mostrar para o Baraky antes de avançar.
 
-### 3 - Criar novo formulário
+## 3 - Criar novo formulário
 
 1. Copiar código do `userForm.js` para o `categoryForm.js`, para visualizar a lista, clique no `INCLUIR` na lista, que deve levar para `/categorias/new`
 1. No final do arquivo, no `connect` do redux, novamente mudar do `userReducer` para o `categoryReducer`.
@@ -64,7 +64,7 @@ Para utilizar eles, basta utilizar os metodos `this.hasError()` e `this.getError
 1. Tentar editar uma categoria já existente.
 1. Mostrar para o Baraky antes de avançar.
 
-### 4 - Criar novo CRUD completo
+## 4 - Criar novo CRUD completo
 
 Agora que criamos as views de lista e formulário da categoria, vamos criar um CRUD completo, definindo também as rotas e declarando ele no redux.
 
@@ -72,6 +72,7 @@ Agora que criamos as views de lista e formulário da categoria, vamos criar um C
 1. Antes de fazer a lista e o form funcionarem, declarar as rotas para esse CRUD.
     - No arquivo `~/src/routes/privateRoutes.js`, adicionar uma linha no retorno da função `PrivateRoutes` com o CRUD de places.
     - No arquivo `~/src/views/components/leftDrawer.js`, adicionar um `MenuItem` levando para a lista de locais. O ícones utilizados são também do `material-ui` e você pode conferir a [documentação](https://material-ui.com/style/icons/#icons) e a [lista de ícones do material design](https://material.io/tools/icons/?style=baseline)
+    - Aproveite para alterar a label dos CRUDS na drawer para `Usuários`, `Categorias` e `Lugares`
 1. Agora que já é possível navegar para o seu CRUD, vamos criar o reducer e actions para ele. Para isso, basta acrescentar o seguinte objeto no array `endpoints` do arquivo `~/src/actions/actionsConfig`:
     ```javascript
         {
