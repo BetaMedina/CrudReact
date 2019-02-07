@@ -27,6 +27,7 @@ const publicPath = '/';
 const publicUrl = '';
 // Get environment variables to inject into our app.
 const env = getClientEnvironment(publicUrl);
+
 // Check if TypeScript is setup
 const useTypeScript = fs.existsSync(paths.appTsConfig);
 
@@ -70,7 +71,6 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
     }
     return loaders;
 };
-
 
 // This is the development configuration.
 // It is focused on developer experience and fast rebuilds.
@@ -344,13 +344,7 @@ module.exports = {
         // The public URL is available as %PUBLIC_URL% in index.html, e.g.:
         // <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
         // In development, this will be an empty string.
-
-        // new InterpolateHtmlPlugin(HtmlWebpackPlugin, Object.assign(env.raw, {
-        //     FAVICO: flavor.favico,
-        //     TITLE: flavor.name,
-        //     MANIFEST: flavor.manifest
-        // })),
-
+        new InterpolateHtmlPlugin(HtmlWebpackPlugin, env.raw),
         // This gives some necessary context to module not found errors, such as
         // the requesting resource.
         new ModuleNotFoundPlugin(paths.appPath),
