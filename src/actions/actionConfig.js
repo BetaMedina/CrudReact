@@ -16,7 +16,25 @@ const endpoints = [
         name: 'user',
         endPoint: '/user',
         nestedKey: 'data',
-        prepareToServer: removeUnderlineId,
+        prepareToServer: (item) => {
+            if (item.phone_prefix) {
+                item.phone_prefix = item.phone_prefix.toString();
+            }
+            if (item.phone) {
+                item.phone = item.phone.toString();
+            }
+            delete item['address_city'];
+            delete item['address_complement'];
+            delete item['address_country'];
+            delete item['address_district'];
+            delete item['address_number'];
+            delete item['address_state'];
+            delete item['address_street'];
+            delete item['address_zip'];
+            delete item['cpf_cnpj'];
+            delete item['_id'];
+            return item;
+        },
         prepareToClient: addUnderlineId
     },
     {
