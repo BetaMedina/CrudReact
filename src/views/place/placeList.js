@@ -26,7 +26,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import TitleComponent from '../components/titleComponent';
 
-class CategoryList extends Component {
+class PlaceList extends Component {
     constructor (props) {
         super(props);
         this.doInsert = this.doInsert.bind(this);
@@ -43,7 +43,7 @@ class CategoryList extends Component {
         return (
             <Fragment>
                 <TitleComponent
-                    title={'Catégorias'}
+                    title={'Lugares'}
                     action={() => this.doInsert()}
                     actionLabel={'INCLUIR'}
                     actionIcon={<Add />} />
@@ -62,7 +62,7 @@ class CategoryList extends Component {
             return (
                 <TableRow key={key}>
                     <TableCell>{item.title}</TableCell>
-                    <TableCell>{item.description}</TableCell>
+                    <TableCell>{item.address}</TableCell>
                     <TableCell />
                     <TableCell style={{ width: 40 }}>
                         <ActionEdit style={style.actionButton} color='action'
@@ -79,7 +79,7 @@ class CategoryList extends Component {
                 <TableHead>
                     <TableRow>
                         <TableCell>Titulo</TableCell>
-                        <TableCell>Descrição</TableCell>
+                        <TableCell>Adress</TableCell>
                         <TableCell />
                         <TableCell style={{ width: 40 }} />
                     </TableRow>
@@ -192,18 +192,18 @@ const Loading = () =>
         <CircularProgress size={50} thickness={3} />
     </div>);
 
-const mapStateToProps = ({ screenReducer, categoryReducer }) => {
+const mapStateToProps = ({ screenReducer, placeReducer }) => {
     const { screenSize } = screenReducer;
-    const { items, loading } = categoryReducer;
+    const { items, loading } = placeReducer;
     // const {user} = auth;
     return { screenSize, items, loading };
 };
 
 export default connect(mapStateToProps,
     {
-        getObjects: AppActions.category.getObjects,
-        deleteObject: AppActions.category.deleteObject,
+        getObjects: AppActions.place.getObjects,
+        deleteObject: AppActions.place.deleteObject,
         openDialog,
         openSnack,
         push
-    })(CategoryList);
+    })(PlaceList);

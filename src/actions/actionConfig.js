@@ -43,6 +43,13 @@ const endpoints = [
         nestedKey: 'data',
         prepareToServer: removeUnderlineId,
         prepareToClient: addUnderlineId
+    },
+    {
+        name: 'place',
+        endPoint: '/place',
+        nestedKey: 'data',
+        prepareToServer: removeUnderlineId,
+        prepareToClient: addUnderlineId
     }
 ].map(item => {
     if (!item.class) {

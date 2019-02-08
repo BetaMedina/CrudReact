@@ -32,6 +32,7 @@ const PrivateRoutes = () => (
             <Route exact path='/' component={Dashboard} />
             {CRUD('/usuarios', 'user')}
             {CRUD('/categorias', 'category')}
+            {CRUD('/lugares', 'place')}
         </Main>
     </Route>
 );

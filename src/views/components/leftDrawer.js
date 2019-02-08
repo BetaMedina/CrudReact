@@ -52,7 +52,13 @@ class LeftDrawer extends Component {
                         <ListItemIcon>
                             <CategoryIcon />
                         </ListItemIcon>
-                        <ListItemText>CRUD em branco</ListItemText>
+                        <ListItemText>CRUD categorias</ListItemText>
+                    </MenuItem>
+                    <MenuItem onClick={() => onMenuClick(this, '/lugares')}>
+                        <ListItemIcon>
+                            <CategoryIcon />
+                        </ListItemIcon>
+                        <ListItemText>CRUD places</ListItemText>
                     </MenuItem>
                 </div>
             </ReponsiveDrawer>
