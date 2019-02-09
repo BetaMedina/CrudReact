@@ -15,17 +15,14 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import { listener } from '../../store';
 import { openDialog, openSnack } from '../../actions/screenActions';
 import AppActions from '../../actions';
-
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableHead from '@material-ui/core/TableHead';
 import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
-
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import TitleComponent from '../components/titleComponent';
-
 class PlaceList extends Component {
     constructor (props) {
         super(props);
@@ -66,7 +63,7 @@ class PlaceList extends Component {
                     <TableCell />
                     <TableCell style={{ width: 40 }}>
                         <ActionEdit style={style.actionButton} color='action'
-                            onClick={(e) => this.doEdit(e, item)} />
+                        onClick={(e) => this.doEdit(e, item)} />
                         <ActionDelete style={style.actionButton} color='action'
                             onClick={(e) => { this.doDelete(e, item); }} />
                     </TableCell>
@@ -79,7 +76,7 @@ class PlaceList extends Component {
                 <TableHead>
                     <TableRow>
                         <TableCell>Titulo</TableCell>
-                        <TableCell>Adress</TableCell>
+                        <TableCell>Address</TableCell>
                         <TableCell />
                         <TableCell style={{ width: 40 }} />
                     </TableRow>
@@ -151,12 +148,12 @@ class PlaceList extends Component {
 
     // Action methods:
     doInsert () {
-        this.props.push('/categorias/new/');
+        this.props.push('/lugares/new/');
     }
 
     doEdit (e, item) {
         // e.stopPropagation();]
-        this.props.history.push(`/categorias/${item.id}`);
+        this.props.history.push(`/lugares/${item.id}`);
     }
 
     doDelete (e, item) {
@@ -171,14 +168,7 @@ class PlaceList extends Component {
         this.props.getObjects();
     }
 
-    translateRole (role) {
-        const possibleRoles = {
-            admin: 'Administrador',
-            user: 'Usuário',
-            sysadmin: 'Administrador do sistema'
-        };
-        return possibleRoles[role];
-    }
+    
 }
 
 let style = {

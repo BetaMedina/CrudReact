@@ -9,7 +9,6 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Toolbar from '@material-ui/core/Toolbar';
-
 import { Text } from '@app-masters/js-lib';
 
 import { openDialog, openSnack } from '../../actions/screenActions';
